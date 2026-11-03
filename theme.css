@@ -1,0 +1,107 @@
+/*
+ * Vidro — Glass panels on a cool gradient.
+ *
+ * The complete token set. Every rule in design.css reads from these names,
+ * so this file is the whole visual identity: change a value here and the
+ * entire gallery follows.
+ *
+ * The second block below holds derived accessibility values. Each one is
+ * the designer's colour pushed toward the opposite end of the ramp until it
+ * clears its WCAG minimum against every surface it can land on -- page,
+ * sheet, and the tinted fills of badges and diff lines. They are generated
+ * and checked, not hand-picked; see build/verify.py in the design tooling.
+ */
+
+[data-theme="vidro"] {
+  --paper: #eef2fb;
+  --paper-2: #e3e9f7;
+  --sheet: rgba(255, 255, 255, 0.62);
+  --ink: #10162a;
+  --ink-2: #414b66;
+  --ink-3: #6c7793;
+  --rule: rgba(16, 22, 42, 0.14);
+  --signal: #6d5cf0;
+  --signal-soft: #cfc8ff;
+  --signal-hover: #574ae0;
+  --ink-hover: #1b2547;
+  --add: #0f9d6e;
+  --del: #e0395f;
+  --board: rgba(16, 22, 42, 0.78);
+  --board-deep: rgba(10, 14, 30, 0.86);
+  --board-2: rgba(255, 255, 255, 0.1);
+  --board-rule: rgba(255, 255, 255, 0.16);
+  --board-text: #f4f6ff;
+  --board-dim: #a9b3d0;
+  --ok-board: #7fe3bd;
+  --err-board: #ff9db0;
+  --code-str: #ffd479;
+  --code-add-bg: color-mix(in srgb, #3fbf7f 18%, transparent);
+  --code-add-fg: #7fe3bd;
+  --code-del-bg: color-mix(in srgb, #e05a5a 16%, transparent);
+  --code-del-fg: #ff9db0;
+  --code-del-text: #c9a8b0;
+  --line-openai: #3f7ff0;
+  --line-anthropic: #e0399f;
+  --line-google: #12b886;
+  --line-mistral: #8b5cf6;
+  --line-deepseek: #7ba11a;
+  --font: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, "Cascadia Mono", monospace;
+  --display: "Space Grotesk", "Inter", system-ui, sans-serif;
+  --display-weight: 600;
+  --display-tracking: -0.03em;
+  --display-tracking-lg: -0.035em;
+  --display-tracking-tight: -0.04em;
+  --display-transform: none;
+  --btn-weight: 600;
+  --btn-tracking: 0;
+  --btn-transform: none;
+  --r-sm: 12px;
+  --r-md: 18px;
+  --r-lg: 26px;
+  --r-pill: 999px;
+  --bw: 1px;
+  --rule-w: 1px;
+  --bw-heavy: 2px;
+  --rule-style: solid;
+  --shadow-card: 0 24px 60px -30px rgba(30, 40, 90, 0.55), 0 2px 6px -2px rgba(30, 40, 90, 0.18);
+  --shadow-btn: 0 10px 22px -12px rgba(30, 40, 90, 0.6);
+  --shadow-btn-hover: 0 14px 26px -12px rgba(30, 40, 90, 0.65);
+  --shadow-panel: 0 24px 60px -34px rgba(30, 40, 90, 0.5);
+  --btn-hover-transform: translateY(-1px);
+  --panel-blur: blur(16px) saturate(140%);
+  --section-y: clamp(72px, 10vw, 128px);
+  --size-base: 1.0625rem;
+  --texture: radial-gradient(50% 40% at 8% 4%, color-mix(in srgb, var(--signal) 26%, transparent), transparent 70%), radial-gradient(45% 35% at 92% 16%, color-mix(in srgb, var(--accent-2) 26%, transparent), transparent 70%), radial-gradient(60% 40% at 50% 100%, color-mix(in srgb, var(--accent-3) 24%, transparent), transparent 70%);
+  --texture-size: 100% 100%, 100% 100%, 100% 100%;
+  --texture-position: 0 0, 0 0, 0 0;
+  --texture-repeat: no-repeat, no-repeat, no-repeat;
+  --texture-attachment: fixed, fixed, fixed;
+  --accent-2: #22b8cf;
+  --accent-3: #f06595;
+
+  /* Derived for contrast; see the note above. */
+  --add-text: #0c7955;
+  --board-add-text: #7fe3bd;
+  --board-code-text: #ffd479;
+  --board-del-text: #d5bcc2;
+  --board-dim-text: #adb7d2;
+  --board-key-text: #ffd479;
+  --del-text: #bf3151;
+  --focus-ring: #6d5cf0;
+  --ink-3-text: #5f6982;
+  --on-ink-muted: #a9b3d0;
+  --on-signal: #ffffff;
+  --signal-soft-text: #0a0a0a;
+  --signal-text: #6354db;
+
+  color-scheme: light;
+}
+
+/* ---------- Identity rules that are not tokens ---------- */
+[data-theme="vidro"] .panel,
+[data-theme="vidro"] .kpi,
+[data-theme="vidro"] .table-wrap,
+[data-theme="vidro"] .dialog {
+  border-color: rgba(255, 255, 255, 0.7);
+}
